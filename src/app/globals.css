@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brewn-crimson: #8C0B0E;
+  --brewn-burgundy: #560406;
+  --brewn-champagne: #F0D5A8;
+  --brewn-bronze: #C89B63;
+  --brewn-cream: #FAF6F0;
+  --brewn-espresso: #1E1412;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--brewn-cream);
+  --color-foreground: var(--brewn-espresso);
+  --color-crimson: var(--brewn-crimson);
+  --color-burgundy: var(--brewn-burgundy);
+  --color-champagne: var(--brewn-champagne);
+  --color-bronze: var(--brewn-bronze);
+  --color-cream: var(--brewn-cream);
+  --color-espresso: var(--brewn-espresso);
+  --font-ui: var(--font-poppins);
+  --font-day: var(--font-plus-jakarta-sans);
+  --font-evening: var(--font-cormorant-garamond);
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-space-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  /* Disable GSAP & Motion animations for accessibility */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--brewn-cream);
+  color: var(--brewn-espresso);
+  font-family: var(--font-dm-sans), sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
 }
